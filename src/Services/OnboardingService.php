@@ -46,9 +46,9 @@ class OnboardingService extends BaseService
      * 
      * @param ?string $doc CPF ou CNPJ com ou sem mascara
      */
-    function findByDoc(string $doc): ?array
+    function findByDoc(string $doc, ?array $with = null): ?array
     {
-        $response = $this->list(limit: 1, doc: $doc);
+        $response = $this->list(limit: 1, doc: $doc, with: $with);
         $data = current($response['data']);
 
         if($doc == str_replace(['.','/','-'], '', $data['doc']))
