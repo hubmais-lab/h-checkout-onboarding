@@ -1,0 +1,36 @@
+{
+    "name": "hubmais/h-checkout-onboarding",
+    "description": "Plugin to onboarding for HUBMAIS",
+    "type": "library",
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "hubmais/h-http-client": "^2.0.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hubmais\\HCheckoutOnboarding\\": "src/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubmais\\HCheckoutOnboarding\\Providers\\HCheckoutOnboardingServiceProvider"
+            ],
+            "aliases": {
+                "HCheckoutOnboarding": "Hubmais\\HCheckoutOnboarding\\Facades\\HCheckoutOnboarding"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,5 @@
+/tests/
+/vendor/
+/docker/
+docker-compose.yaml
+sail.sh
