@@ -5,7 +5,7 @@ Aqui vamos mostrar como é facil a instalação e utilização.
 
 ## Requisitos
 
-* php (versão 7.2 ou >=8.2)
+* php (versão >=7.2)
 * composer (mais recente)
 
 

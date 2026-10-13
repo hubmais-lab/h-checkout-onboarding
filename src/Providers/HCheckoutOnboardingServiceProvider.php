@@ -17,7 +17,7 @@ class HCheckoutOnboardingServiceProvider extends ServiceProvider
             return new \Hubmais\HCheckoutOnboarding\Services\Manager($app->make(\Hubmais\HClient\Client::class));
         });
 
-        $this->app->singleton('h-smart-tef', function ($app) {
+        $this->app->singleton('h-checkout-onboarding', function ($app) {
             return $app->make(\Hubmais\HCheckoutOnboarding\Services\Manager::class);
         });
     }
