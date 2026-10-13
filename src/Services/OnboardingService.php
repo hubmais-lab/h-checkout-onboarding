@@ -51,7 +51,7 @@ class OnboardingService extends BaseService
         $response = $this->list(limit: 1, doc: $doc, with: $with);
         $data = current($response['data']);
 
-        if($doc == str_replace(['.','/','-'], '', $data['doc']))
+        if($data ? $doc == str_replace(['.','/','-'], '', $data['doc']) : false)
             return $data;
 
         return null;
